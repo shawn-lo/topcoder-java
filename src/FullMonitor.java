@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by Shawn on 3/17/15.
  */
@@ -5,53 +8,55 @@ public class FullMonitor {
 
     public int numLasers(String[] pixels) {
         // Build 3 sets - (x,y), (y,z), (x,z)
-        String[] xyArr = new String[pixels.length];
-        String[] yzArr = new String[pixels.length];
-        String[] xzArr = new String[pixels.length];
+        Set xySet = new HashSet();
+        Set yzSet = new HashSet();
+        Set xzSet = new HashSet();
 
-        for (int i = 0; i < pixels.length; i++) {
-            String xyzStr = pixels[i];
+        for(String xyzStr : pixels){
             String[] xyzArr = xyzStr.split(",");
-            String x = xyzArr[0];
-            String y = xyzArr[1];
-            String z = xyzArr[2];
-
-
-
-            xyArr[i] = x + " " + y; // Or, xyArr[i] = x.concat(",").concat(y);
-            yzArr[i] = y + " " + z;
-            xzArr[i] = x + " " + z;
+            String xy = xyzArr[0] + "," + xyzArr[1];
+            String yz = xyzArr[1] + "," + xyzArr[2];
+            String xz = xyzArr[0] + "," + xyzArr[2];
+            xySet.add(xy);
+            yzSet.add(yz);
+            xzSet.add(xz);
         }
+        System.out.println(yzSet.size());
 
-        //Traverse 3 sets.
-        int duplicate = 0;
-        for (int i = 0; i < pixels.length; i++) {
-            char[] xyPlate = xyArr[i].toCharArray();
-            char x1 = xyPlate[0];
-            char y1 = xyPlate[1];
+        for(Object xy : xySet) {
+            String[] xyArr = xy.toString().split(",");
+            String x1 = xyArr[0];
+            String y1 = xyArr[1];
 
-            for(int j = 0; j < pixels.length; j++) {
-                char[] yzPlate = yzArr[j].toCharArray();
-                char y2 = yzPlate[0];
-                char z1 = yzPlate[1];
+            for(Object yz : yzSet) {
+                String[] yzArr = yz.toString().split(",");
+                String y2 = yzArr[0];
+                String z1 = yzArr[1];
 
-                for(int k = 0; k < pixels.length; k++) {
-                    char[] xzPlate = xzArr[k].toCharArray();
-                    char x2 = xzPlate[0];
-                    char z2 = xzPlate[1];
+                for(Object xz : xzSet) {
+                    String[] xzArr = xz.toString().split(",");
+                    String x2 = xzArr[0];
+                    String z2 = xzArr[1];
 
-                    if(x1 == x2 && y1 == y2 && z1 == z2) {
-                        duplicate++;
-                        String newStr = x1 + "," + y1 + "," + z1;
-                        for(String oldStr : pixels) {
-                            if( oldStr.equals(newStr))
-                                return -1;
+//                    System.out.printf("x1, y1 : %s , %s \n", x1, y1);
+//                    System.out.printf("y2, z1 : %s , %s \n", y2, z1);
+//                    System.out.printf("x2, z2 : %s , %s \n", x2, z2);
+                    // x1 == x2 && y1 == y2 && z1 == z2
+                    if( x1.equals(x2) && y1.equals(y2) && z1.equals(z2)) {
+                        //(x, y, z) not in the input
+                        String xyzNew = x1 + "," + y1 + "," + z1;
+                        int inPixels = 0;
+                        for(String temp : pixels) {
+                            if(temp.equals(xyzNew))
+                                inPixels = 1;
+                        }
+                        if (inPixels == 0) {
+                            return -1;
                         }
                     }
                 }
             }
         }
-
-        return 3 * pixels.length - duplicate;
+        return xySet.size() + yzSet.size() + xzSet.size();
     }
 }
