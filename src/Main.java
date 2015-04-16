@@ -44,23 +44,33 @@ public class Main {
 /**
  * WallRepair
  */
-        WallRepair wr = new WallRepair();
-        String[] wallRows1 = {
-                "..X...X.....",
-                "....X.X...XX",
-                "...........X",
-                "..X.......X."};
-        String[] wallRows2 = {".X...X..X"};
-        String[] wallRows3 = {
-                ".........X............",
-                "......X..X..X..X......",
-                "X.......X..X.........X",
-                "....XXXXX..X.XXXXX...X",
-                ".....X..X..X.........X",
-                "...X....X..X.........X",
-                ".X...XX..X..X..X......",
-                ".....X...X...XX......X"};
-        int result = wr.bricksRequired(wallRows3);
-        System.out.println(result);
+//        WallRepair wr = new WallRepair();
+//        String[] wallRows1 = {
+//                "..X...X.....",
+//                "....X.X...XX",
+//                "...........X",
+//                "..X.......X."};
+//        String[] wallRows2 = {".X...X..X"};
+//        String[] wallRows3 = {
+//                ".........X............",
+//                "......X..X..X..X......",
+//                "X.......X..X.........X",
+//                "....XXXXX..X.XXXXX...X",
+//                ".....X..X..X.........X",
+//                "...X....X..X.........X",
+//                ".X...XX..X..X..X......",
+//                ".....X...X...XX......X"};
+//        int result = wr.bricksRequired(wallRows3);
+//        System.out.println(result);
+/**
+ * QuoteContest
+ */
+            QuoteContest qc = new QuoteContest();
+            String[] quotes1 = {"4 1 firstquote","10 2 secondquote","1 5 thirdquote"};
+            String[] quotes2 = {"13 5 nocodecanbreakme","10 6 iamthebest","13 2 trytochallengeme"};
+            String[] quotes3 = {"1 1 justdoit","1 2 thewinnertakeitall","1 4 aboutthechallenge"};
+            String[] quotes4 = {"1 1 theworstquoteintheworld"};
+            String result = qc.bestQuote(quotes4);
+            System.out.println(result);
     }
 }
