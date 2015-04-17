@@ -65,12 +65,49 @@ public class Main {
 /**
  * QuoteContest
  */
-            QuoteContest qc = new QuoteContest();
-            String[] quotes1 = {"4 1 firstquote","10 2 secondquote","1 5 thirdquote"};
-            String[] quotes2 = {"13 5 nocodecanbreakme","10 6 iamthebest","13 2 trytochallengeme"};
-            String[] quotes3 = {"1 1 justdoit","1 2 thewinnertakeitall","1 4 aboutthechallenge"};
-            String[] quotes4 = {"1 1 theworstquoteintheworld"};
-            String result = qc.bestQuote(quotes4);
-            System.out.println(result);
+//            QuoteContest qc = new QuoteContest();
+//            String[] quotes1 = {"4 1 firstquote","10 2 secondquote","1 5 thirdquote"};
+//            String[] quotes2 = {"13 5 nocodecanbreakme","10 6 iamthebest","13 2 trytochallengeme"};
+//            String[] quotes3 = {"1 1 justdoit","1 2 thewinnertakeitall","1 4 aboutthechallenge"};
+//            String[] quotes4 = {"1 1 theworstquoteintheworld"};
+//            String result = qc.bestQuote(quotes4);
+//            System.out.println(result);
+/**
+ * IsHomomorphism
+ */
+        IsHomomorphism ih = new IsHomomorphism();
+        String[] source1 = {
+                "0000",
+                "0123",
+                "0202",
+                "0321"};
+        String[] result1 = {
+                "0000",
+                "0123",
+                "0202",
+                "0321"};
+        int[] mapping1 = {0, 1, 2, 3};
+        String[] source2 = {
+                "0123456",
+                "1234560",
+                "2345601",
+                "3456012",
+                "4560123",
+                "5601234",
+                "6012345"};
+        String[] result2 = {
+                "0123456",
+                "1234560",
+                "2345601",
+                "3456012",
+                "4560123",
+                "5601234",
+                "6012345"};
+        int [] mapping2 = {1,3,2,1,2,1,1};
+        String[] result = ih.numBad(source2, result2, mapping2);
+        for(int i = 0; i < result.length; i++)
+        {
+            System.out.println(result[i]);
+        }
     }
 }
