@@ -75,48 +75,75 @@ public class Main {
 /**
  * IsHomomorphism
  */
-        IsHomomorphism ih = new IsHomomorphism();
-        String[] source1 = {
-                "0000",
-                "0123",
-                "0202",
-                "0321"};
-        String[] result1 = {
-                "0000",
-                "0123",
-                "0202",
-                "0321"};
-        int[] mapping1 = {0, 1, 2, 3};
-        String[] source2 = {
-                "0123456",
-                "1234560",
-                "2345601",
-                "3456012",
-                "4560123",
-                "5601234",
-                "6012345"};
-        String[] result2 = {
-                "0123456",
-                "1234560",
-                "2345601",
-                "3456012",
-                "4560123",
-                "5601234",
-                "6012345"};
-        int [] mapping2 = {1,3,2,1,2,1,1};
-        String[] source3 = {
-                "012",
-                "120",
-                "210"};
-        String[] result3 = {
-                "012",
-                "120",
-                "210"};
-        int[] mapping3 = {1,2,0};
-        String[] result = ih.numBad(source3, result3, mapping3);
-        for(int i = 0; i < result.length; i++)
-        {
-            System.out.println(result[i]);
-        }
+//        IsHomomorphism ih = new IsHomomorphism();
+//        String[] source1 = {
+//                "0000",
+//                "0123",
+//                "0202",
+//                "0321"};
+//        String[] result1 = {
+//                "0000",
+//                "0123",
+//                "0202",
+//                "0321"};
+//        int[] mapping1 = {0, 1, 2, 3};
+//        String[] source2 = {
+//                "0123456",
+//                "1234560",
+//                "2345601",
+//                "3456012",
+//                "4560123",
+//                "5601234",
+//                "6012345"};
+//        String[] result2 = {
+//                "0123456",
+//                "1234560",
+//                "2345601",
+//                "3456012",
+//                "4560123",
+//                "5601234",
+//                "6012345"};
+//        int [] mapping2 = {1,3,2,1,2,1,1};
+//        String[] source3 = {
+//                "012",
+//                "120",
+//                "210"};
+//        String[] result3 = {
+//                "012",
+//                "120",
+//                "210"};
+//        int[] mapping3 = {1,2,0};
+//        String[] result = ih.numBad(source3, result3, mapping3);
+//        for(int i = 0; i < result.length; i++)
+//        {
+//            System.out.println(result[i]);
+//        }
+/**
+ * FloorLayout
+ */
+        FloorLayout fl = new FloorLayout();
+        String[] layout1 = {
+                "----"
+                ,"----"
+                ,"----"
+                ,"----"};
+        String[] layout2 = {
+                "-||--||--"
+                ,"--||--||-"
+                ,"|--||--||"
+                ,"||--||--|"
+                ,"-||--||--"
+                ,"--||--||-"};
+        String[] layout3 = {
+                "--------"
+                ,"|------|"
+                ,"||----||"
+                ,"|||--|||"
+                ,"||----||"
+                ,"|------|"
+                ,"--------"};
+        int result = fl.countBoards(layout3);
+        System.out.println(result);
+
     }
 }
