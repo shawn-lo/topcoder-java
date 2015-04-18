@@ -104,7 +104,16 @@ public class Main {
                 "5601234",
                 "6012345"};
         int [] mapping2 = {1,3,2,1,2,1,1};
-        String[] result = ih.numBad(source2, result2, mapping2);
+        String[] source3 = {
+                "012",
+                "120",
+                "210"};
+        String[] result3 = {
+                "012",
+                "120",
+                "210"};
+        int[] mapping3 = {1,2,0};
+        String[] result = ih.numBad(source3, result3, mapping3);
         for(int i = 0; i < result.length; i++)
         {
             System.out.println(result[i]);
