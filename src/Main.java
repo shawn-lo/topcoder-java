@@ -1,3 +1,5 @@
+import StringParsing.*;
+import DP.*;
 
 public class Main {
 
@@ -5,10 +7,10 @@ public class Main {
         System.out.println("Another test for HTTP or SSH");
         System.out.println("Hello World!");
 /**
- * FullMonitor
+ * StringParsing.FullMonitor
  */
-//        FullMonitor fm = new FullMonitor();
-//        FullMonitorBetter fmb = new FullMonitorBetter();
+//        StringParsing.FullMonitor fm = new StringParsing.FullMonitor();
+//        StringParsing.FullMonitorBetter fmb = new StringParsing.FullMonitorBetter();
 //        String[] pixels1 = {"25,25,25","25,25,26"};
 //        String[] pixels2 = {"1,1,3","1,3,1","3,1,1"};
 //        String[] pixels3 = {"25,25,25","25,25,26","25,26,26","25,26,25"};
@@ -17,9 +19,9 @@ public class Main {
 //        int result = fmb.numLasers(pixels1);
 //        System.out.println(result);
 /**
- * RPN
+ * StringParsing.RPN
  */
-//        RPN rpn = new RPN();
+//        StringParsing.RPN rpn = new StringParsing.RPN();
 //        String expr1 = "2 3 + 6 ~ 7 * -";
 //        String expr2 = "5 ~ ~ ~";
 //        String expr3 = "9 8 7 * * 4 5 - -";
@@ -28,9 +30,9 @@ public class Main {
 //        int result = rpn.evaluate(expr5);
 //        System.out.println(result);
 /**
- * SearchDisks
+ * StringParsing.SearchDisks
  */
-//        SearchDisks sd = new SearchDisks();
+//        StringParsing.SearchDisks sd = new StringParsing.SearchDisks();
 //        String diskNames1 = "beatles queen abba";
 //        String searchDisk1 = "abba";
 //        String diskNames2 = "beatles queen abba";
@@ -42,9 +44,9 @@ public class Main {
 //        int result = sd.numberToTakeOut(diskNames4, searchDisk4);
 //        System.out.println(result);
 /**
- * WallRepair
+ * StringParsing.WallRepair
  */
-//        WallRepair wr = new WallRepair();
+//        StringParsing.WallRepair wr = new StringParsing.WallRepair();
 //        String[] wallRows1 = {
 //                "..X...X.....",
 //                "....X.X...XX",
@@ -63,9 +65,9 @@ public class Main {
 //        int result = wr.bricksRequired(wallRows3);
 //        System.out.println(result);
 /**
- * QuoteContest
+ * StringParsing.QuoteContest
  */
-//            QuoteContest qc = new QuoteContest();
+//            StringParsing.QuoteContest qc = new StringParsing.QuoteContest();
 //            String[] quotes1 = {"4 1 firstquote","10 2 secondquote","1 5 thirdquote"};
 //            String[] quotes2 = {"13 5 nocodecanbreakme","10 6 iamthebest","13 2 trytochallengeme"};
 //            String[] quotes3 = {"1 1 justdoit","1 2 thewinnertakeitall","1 4 aboutthechallenge"};
@@ -73,9 +75,9 @@ public class Main {
 //            String result = qc.bestQuote(quotes4);
 //            System.out.println(result);
 /**
- * IsHomomorphism
+ * StringParsing.IsHomomorphism
  */
-//        IsHomomorphism ih = new IsHomomorphism();
+//        StringParsing.IsHomomorphism ih = new StringParsing.IsHomomorphism();
 //        String[] source1 = {
 //                "0000",
 //                "0123",
@@ -119,31 +121,37 @@ public class Main {
 //            System.out.println(result[i]);
 //        }
 /**
- * FloorLayout
+ * StringParsing.FloorLayout
  */
-        FloorLayout fl = new FloorLayout();
-        String[] layout1 = {
-                "----"
-                ,"----"
-                ,"----"
-                ,"----"};
-        String[] layout2 = {
-                "-||--||--"
-                ,"--||--||-"
-                ,"|--||--||"
-                ,"||--||--|"
-                ,"-||--||--"
-                ,"--||--||-"};
-        String[] layout3 = {
-                "--------"
-                ,"|------|"
-                ,"||----||"
-                ,"|||--|||"
-                ,"||----||"
-                ,"|------|"
-                ,"--------"};
-        int result = fl.countBoards(layout3);
+//        FloorLayout fl = new FloorLayout();
+//        String[] layout1 = {
+//                "----"
+//                ,"----"
+//                ,"----"
+//                ,"----"};
+//        String[] layout2 = {
+//                "-||--||--"
+//                ,"--||--||-"
+//                ,"|--||--||"
+//                ,"||--||--|"
+//                ,"-||--||--"
+//                ,"--||--||-"};
+//        String[] layout3 = {
+//                "--------"
+//                ,"|------|"
+//                ,"||----||"
+//                ,"|||--|||"
+//                ,"||----||"
+//                ,"|------|"
+//                ,"--------"};
+//        int result = fl.countBoards(layout3);
+//        System.out.println(result);
+/**
+ * Longest Increasing Subsequence
+ */
+        LIS lis = new LIS();
+        int[] sequence = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+        int result = lis.countLength(sequence);
         System.out.println(result);
-
     }
 }
