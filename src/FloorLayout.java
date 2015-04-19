@@ -46,4 +46,16 @@ public class FloorLayout {
         }
         return count;
     }
+
+//    int countBoards(vector <string> layout){
+//        int count = 0;
+//        for (int i=0;i<layout.size();i++)
+//            for (int j=0;j<layout[i].size();j++)
+//                if (layout[i][j] == '-'){
+//                    if (j==0 || layout[i][j-1]=='|') count++;
+//                } else {
+//                    if (i==0 || layout[i-1][j]=='-') count++;
+//                }
+//        return count;
+//    }
 }
