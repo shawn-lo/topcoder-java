@@ -1,3 +1,5 @@
+package StringParsing;
+
 /**
  * Created by Shawn on 4/18/15.
  */

@@ -1,4 +1,4 @@
-/**
+package StringParsing; /**
  * Created by Shawn on 4/14/15.
  * Copyright:
  * @author Yiuyuho, Topcoder

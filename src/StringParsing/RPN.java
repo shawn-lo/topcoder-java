@@ -1,4 +1,4 @@
-/**
+package StringParsing; /**
  * Created by Shawn on 4/15/15.
  */
 import java.util.*;
