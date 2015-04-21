@@ -147,11 +147,21 @@ public class Main {
 //        int result = fl.countBoards(layout3);
 //        System.out.println(result);
 /**
+ * Paint Ball
+ */
+        PaintBall pb = new PaintBall();
+        String[] player1 = {"A RED", "B BLUE"};
+        String[] message1 = {"A SPLATTERED B"};
+        String[] player2 = {"LISA RED", "BART RED", "HOMER BLUE", "MARGE BLUE", "MAGGIE GREEN"};
+        String[] message2 = {"MAGGIE SPLATTERED HOMER", "MAGGIE SPLATTERED MARGE"};
+        String[] result = pb.getLeaderBoard(player2, message2);
+
+/**
  * Longest Increasing Subsequence
  */
-        LIS lis = new LIS();
-        int[] sequence = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
-        int result = lis.countLength(sequence);
-        System.out.println(result);
+//        LIS lis = new LIS();
+//        int[] sequence = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+//        int result = lis.countLength(sequence);
+//        System.out.println(result);
     }
 }
