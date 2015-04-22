@@ -158,18 +158,35 @@ public class Main {
 /**
  * Clients List
  */
-        ClientsList cl = new ClientsList();
-        String[] name1 = {"Joe Smith", "Brown, Sam", "Miller, Judi"};
-        String[] name2 = {"Campbell, Phil", "John Campbell", "Young, Warren"};
-        String[] name3 = {"Kelly, Anthony", "Kelly Anthony", "Thompson, Jack"};
-        String[] name4 = {"Trevor Alvarez", "Jackson, Walter", "Mandi Stuart",
-                "Martin, Michael", "Peters, Tammy", "Richard Belmont",
-                "Carl Thomas", "Ashton, Roger", "Jamie Martin"};
-        String[] result = cl.dataCleanup(name4);
-        for(String s : result)
-        {
-            System.out.println(s);
-        }
+//        ClientsList cl = new ClientsList();
+//        String[] name1 = {"Joe Smith", "Brown, Sam", "Miller, Judi"};
+//        String[] name2 = {"Campbell, Phil", "John Campbell", "Young, Warren"};
+//        String[] name3 = {"Kelly, Anthony", "Kelly Anthony", "Thompson, Jack"};
+//        String[] name4 = {"Trevor Alvarez", "Jackson, Walter", "Mandi Stuart",
+//                "Martin, Michael", "Peters, Tammy", "Richard Belmont",
+//                "Carl Thomas", "Ashton, Roger", "Jamie Martin"};
+//        String[] result = cl.dataCleanup(name4);
+//        for(String s : result)
+//        {
+//            System.out.println(s);
+//        }
+/**
+ * Business Tasks
+ */
+        BusinessTasks bt = new BusinessTasks();
+        String[] list1 = {"a","b","c","d"};
+        int n1 = 2;
+        String[] list2 = {"a","b","c","d","e"};
+        int n2 = 3;
+        String[] list3 = {"alpha","beta","gamma","delta","epsilon"};
+        int n3 = 1;
+        String[] list4 = {"a","b"};
+        int n4 = 1000;
+        String[] list5 = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
+                "u","v","w","x","y","z"};
+        int n5 = 17;
+        String result = bt.getTask(list5, n5);
+        System.out.println(result);
 /**
  * Longest Increasing Subsequence
  */
