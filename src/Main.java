@@ -149,13 +149,27 @@ public class Main {
 /**
  * Paint Ball
  */
-        PaintBall pb = new PaintBall();
-        String[] player1 = {"A RED", "B BLUE"};
-        String[] message1 = {"A SPLATTERED B"};
-        String[] player2 = {"LISA RED", "BART RED", "HOMER BLUE", "MARGE BLUE", "MAGGIE GREEN"};
-        String[] message2 = {"MAGGIE SPLATTERED HOMER", "MAGGIE SPLATTERED MARGE"};
-        String[] result = pb.getLeaderBoard(player2, message2);
-
+//        PaintBall pb = new PaintBall();
+//        String[] player1 = {"A RED", "B BLUE"};
+//        String[] message1 = {"A SPLATTERED B"};
+//        String[] player2 = {"LISA RED", "BART RED", "HOMER BLUE", "MARGE BLUE", "MAGGIE GREEN"};
+//        String[] message2 = {"MAGGIE SPLATTERED HOMER", "MAGGIE SPLATTERED MARGE"};
+//        String[] result = pb.getLeaderBoard(player2, message2);
+/**
+ * Clients List
+ */
+        ClientsList cl = new ClientsList();
+        String[] name1 = {"Joe Smith", "Brown, Sam", "Miller, Judi"};
+        String[] name2 = {"Campbell, Phil", "John Campbell", "Young, Warren"};
+        String[] name3 = {"Kelly, Anthony", "Kelly Anthony", "Thompson, Jack"};
+        String[] name4 = {"Trevor Alvarez", "Jackson, Walter", "Mandi Stuart",
+                "Martin, Michael", "Peters, Tammy", "Richard Belmont",
+                "Carl Thomas", "Ashton, Roger", "Jamie Martin"};
+        String[] result = cl.dataCleanup(name4);
+        for(String s : result)
+        {
+            System.out.println(s);
+        }
 /**
  * Longest Increasing Subsequence
  */
