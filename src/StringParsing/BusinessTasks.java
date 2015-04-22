@@ -22,6 +22,9 @@ public class BusinessTasks {
             {
                 index = index - tasks.size();
             }
+            // There is a better way to cut off this while loop.
+            // using %, I forgot it before.
+
             tasks.remove(index);
         }
 
