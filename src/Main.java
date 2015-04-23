@@ -173,19 +173,31 @@ public class Main {
 /**
  * Business Tasks
  */
-        BusinessTasks bt = new BusinessTasks();
-        String[] list1 = {"a","b","c","d"};
-        int n1 = 2;
-        String[] list2 = {"a","b","c","d","e"};
-        int n2 = 3;
-        String[] list3 = {"alpha","beta","gamma","delta","epsilon"};
-        int n3 = 1;
-        String[] list4 = {"a","b"};
-        int n4 = 1000;
-        String[] list5 = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
-                "u","v","w","x","y","z"};
-        int n5 = 17;
-        String result = bt.getTask(list5, n5);
+//        BusinessTasks bt = new BusinessTasks();
+//        String[] list1 = {"a","b","c","d"};
+//        int n1 = 2;
+//        String[] list2 = {"a","b","c","d","e"};
+//        int n2 = 3;
+//        String[] list3 = {"alpha","beta","gamma","delta","epsilon"};
+//        int n3 = 1;
+//        String[] list4 = {"a","b"};
+//        int n4 = 1000;
+//        String[] list5 = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
+//                "u","v","w","x","y","z"};
+//        int n5 = 17;
+//        String result = bt.getTask(list5, n5);
+//        System.out.println(result);
+/**
+ * Library
+ */
+        Library lib = new Library();
+        String[] records1 = {"diary computers editor","fairytale gardening editor","comix cars author","comix cars librarian"};
+        String[] userGroups1 = {"employee","editor","author"};
+        String[] roomRights1 = {"history","cars","computers"};
+        String[] records2 = {"diary computers editor","fairytale gardening editor","comix cars author","comix cars librarian"};
+        String[] userGroups2 = {"employee","editor","author","librarian"};
+        String[] roomRights2 = {"history","cars","computers"};
+        int result = lib.documentAccess(records1, userGroups1, roomRights1);
         System.out.println(result);
 /**
  * Longest Increasing Subsequence
