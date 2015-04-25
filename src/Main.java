@@ -1,3 +1,4 @@
+import BruteForce.DQuads;
 import StringParsing.*;
 import DP.*;
 
@@ -190,15 +191,24 @@ public class Main {
 /**
  * Library
  */
-        Library lib = new Library();
-        String[] records1 = {"diary computers editor","fairytale gardening editor","comix cars author","comix cars librarian"};
-        String[] userGroups1 = {"employee","editor","author"};
-        String[] roomRights1 = {"history","cars","computers"};
-        String[] records2 = {"diary computers editor","fairytale gardening editor","comix cars author","comix cars librarian"};
-        String[] userGroups2 = {"employee","editor","author","librarian"};
-        String[] roomRights2 = {"history","cars","computers"};
-        int result = lib.documentAccess(records1, userGroups1, roomRights1);
+//        Library lib = new Library();
+//        String[] records1 = {"diary computers editor","fairytale gardening editor","comix cars author","comix cars librarian"};
+//        String[] userGroups1 = {"employee","editor","author"};
+//        String[] roomRights1 = {"history","cars","computers"};
+//        String[] records2 = {"diary computers editor","fairytale gardening editor","comix cars author","comix cars librarian"};
+//        String[] userGroups2 = {"employee","editor","author","librarian"};
+//        String[] roomRights2 = {"history","cars","computers"};
+//        int result = lib.documentAccess(records1, userGroups1, roomRights1);
+//        System.out.println(result);
+/**
+ * DQuads
+ */
+        DQuads dq = new DQuads();
+        String[] flights1 = {"1 1 1 1 1 1 1 1 1 1","2","3","0"};
+        String[] flights2 = {"1 1 1 1 1 1 1 1 1 1","2","3","0 1"};
+        int result = dq.count(flights1);
         System.out.println(result);
+
 /**
  * Longest Increasing Subsequence
  */
