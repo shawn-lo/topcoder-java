@@ -1,4 +1,5 @@
 import BruteForce.DQuads;
+import BruteForce.Isoceles;
 import StringParsing.*;
 import DP.*;
 
@@ -203,12 +204,23 @@ public class Main {
 /**
  * DQuads
  */
-        DQuads dq = new DQuads();
-        String[] flights1 = {"1 1 1 1 1 1 1 1 1 1","2","3","0"};
-        String[] flights2 = {"1 1 1 1 1 1 1 1 1 1","2","3","0 1"};
-        int result = dq.count(flights1);
+//        DQuads dq = new DQuads();
+//        String[] flights1 = {"1 1 1 1 1 1 1 1 1 1","2","3","0"};
+//        String[] flights2 = {"1 1 1 1 1 1 1 1 1 1","2","3","0 1"};
+//        int result = dq.count(flights1);
+//        System.out.println(result);
+/**
+ * Isoceles
+ */
+        Isoceles it = new Isoceles();
+        int[] xs1 = {0, 1, 2};
+        int[] ys1 = {0, 10, 0};
+        int[] xs2 = {0, 0, 5, 5};
+        int[] ys2 = {0, 5, 0, 5};
+        int[] xs3 = {-1000000, 1000000, 0};
+        int[] ys3 = {0, 0, 1000000};
+        int result = it.howMany(xs3, ys3);
         System.out.println(result);
-
 /**
  * Longest Increasing Subsequence
  */
