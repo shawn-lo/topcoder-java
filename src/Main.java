@@ -1,5 +1,4 @@
-import BruteForce.DQuads;
-import BruteForce.Isoceles;
+import BruteForce.*;
 import StringParsing.*;
 import DP.*;
 
@@ -212,14 +211,22 @@ public class Main {
 /**
  * Isoceles
  */
-        Isoceles it = new Isoceles();
-        int[] xs1 = {0, 1, 2};
-        int[] ys1 = {0, 10, 0};
-        int[] xs2 = {0, 0, 5, 5};
-        int[] ys2 = {0, 5, 0, 5};
-        int[] xs3 = {-1000000, 1000000, 0};
-        int[] ys3 = {0, 0, 1000000};
-        int result = it.howMany(xs3, ys3);
+//        Isoceles it = new Isoceles();
+//        int[] xs1 = {0, 1, 2};
+//        int[] ys1 = {0, 10, 0};
+//        int[] xs2 = {0, 0, 5, 5};
+//        int[] ys2 = {0, 5, 0, 5};
+//        int[] xs3 = {-1000000, 1000000, 0};
+//        int[] ys3 = {0, 0, 1000000};
+//        int result = it.howMany(xs3, ys3);
+//        System.out.println(result);
+/**
+ * Shouting
+ */
+        Shouting sh = new Shouting();
+        int[] x1 = {-2000, -2000};
+        int[] y1 = {3000, 3000};
+        double result = sh.shout(x1, y1);
         System.out.println(result);
 /**
  * Longest Increasing Subsequence
