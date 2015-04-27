@@ -1,4 +1,5 @@
 import BruteForce.*;
+import Others.Permutation;
 import StringParsing.*;
 import DP.*;
 
@@ -223,11 +224,12 @@ public class Main {
 /**
  * Shouting
  */
-        Shouting sh = new Shouting();
-        int[] x1 = {-2000, -2000};
-        int[] y1 = {3000, 3000};
-        double result = sh.shout(x1, y1);
-        System.out.println(result);
+//        Shouting sh = new Shouting();
+//        int[] x1 = {-2000, -2000};
+//        int[] y1 = {3000, 3000};
+//        double result = sh.shout(x1, y1);
+//        System.out.println(result);
+
 /**
  * Longest Increasing Subsequence
  */
@@ -235,5 +237,11 @@ public class Main {
 //        int[] sequence = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
 //        int result = lis.countLength(sequence);
 //        System.out.println(result);
+/**
+ * Permutation
+ */
+        Permutation t = new Permutation();
+        int[] array = {1, 3, 5};
+        t.getPermutation(array, 0, 2);
     }
 }
