@@ -1,7 +1,4 @@
-import BruteForce.*;
 import Others.Permutation;
-import StringParsing.*;
-import DP.*;
 
 public class Main {
 
@@ -241,7 +238,13 @@ public class Main {
  * Permutation
  */
         Permutation t = new Permutation();
-        int[] array = {1, 3, 5};
+        int[] array = {1, 2, 2};
         t.getPermutation(array, 0, 2);
+/**
+ * Permutation No Duplication
+ */
+//        PermutationDup t = new PermutationDup();
+//        int[] array = {1, 3, 2};
+//        t.getPermtDup(array, 0, 2);
     }
 }
