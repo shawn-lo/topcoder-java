@@ -41,12 +41,12 @@ public class PermutationDup {
         {
             for(int i = startIndex; i <= endIndex; i++)
             {
-//                if(!isDup(array, startIndex, i))
-//                {
+                if(!isDup(array, startIndex, i))
+                {
                     swap(array, startIndex, i);
                     getPermtDup(array, startIndex+1, i);
                     swap(array, startIndex, i);
-//                }
+                }
             }
         }
     }
