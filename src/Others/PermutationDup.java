@@ -23,7 +23,7 @@ public class PermutationDup {
 
     public boolean isDup(int[] array, int start, int end)
     {
-        for(int i = start; i < end; i++)
+        for(; start < end; start++)
         {
             if(array[start] == array[end])
                 return true;
@@ -44,7 +44,7 @@ public class PermutationDup {
                 if(!isDup(array, startIndex, i))
                 {
                     swap(array, startIndex, i);
-                    getPermtDup(array, startIndex+1, i);
+                    getPermtDup(array, startIndex+1, endIndex);
                     swap(array, startIndex, i);
                 }
             }
