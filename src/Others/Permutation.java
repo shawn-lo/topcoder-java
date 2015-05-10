@@ -20,6 +20,16 @@ public class Permutation {
         System.out.println(" ");
     }
 
+    public boolean isDup(int[] array, int start, int end)
+    {
+        for(; start < end; start++)
+        {
+            if(array[start] == array[end])
+                return true;
+        }
+        return false;
+    }
+
     public void getPermutation(int[] array, int startIndex, int endIndex)
     {
         if(startIndex == endIndex)
@@ -30,9 +40,9 @@ public class Permutation {
         {
             for(int i = startIndex; i <= endIndex; i++)
             {
-                swap(array, startIndex, i);
-                getPermutation(array, startIndex+1, endIndex);
-                swap(array, startIndex, i);
+                    swap(array, startIndex, i);
+                    getPermutation(array, startIndex + 1, endIndex);
+                    swap(array, startIndex, i);
             }
         }
 //        printArray(array);
