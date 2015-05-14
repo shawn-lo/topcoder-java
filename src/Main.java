@@ -243,8 +243,14 @@ public class Main {
 /**
  * Permutation No Duplication
  */
-        PermutationDup t = new PermutationDup();
-        int[] array = {1, 2, 2};
-        t.getPermtDup(array, 0, 2);
+//        PermutationDup t = new PermutationDup();
+//        int[] array = {1, 2, 2};
+//        t.getPermtDup(array, 0, 2);
+/**
+ * Combination - recursion
+ */
+        Combination c = new Combination();
+        char[] array = {'a', 'b', 'c'};
+        c.combiantion(array);
     }
 }
