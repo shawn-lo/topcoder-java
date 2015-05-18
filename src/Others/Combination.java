@@ -28,18 +28,4 @@ public class Combination {
         list.remove((Character)cs[begin]);
         combine(cs,begin+1,number,list);
     }
-
-    public void combineInt(int[] array, int begin, int number, List<Integer> list){
-        if(number == 0)
-        {
-            System.out.println(list.toString());
-            return ;
-        }
-        if(begin == array.length)
-            return ;
-        list.add(array[begin]);
-        combineInt(array, begin+1, number-1, list);
-        list.remove(array[begin]);
-
-    }
 }
